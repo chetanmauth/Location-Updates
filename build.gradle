@@ -13,12 +13,10 @@ allprojects {
         project.plugins.apply('maven-publish')
         publishing {
             publications {
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
-                    from components.release
-                    groupId = 'com.github.chetanmauth'
-                    artifactId = 'Location-Updates'
-                    version = '1.4'
+                mavenJava(MavenPublication) {
+                    groupId = 'com.chetan.locationupdates'
+                    artifactId = 'com.chetan.periodiclocation'
+                    version = '1.0'
                 }
             }
         }
