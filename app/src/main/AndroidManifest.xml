@@ -22,7 +22,7 @@
         </activity>
 
         <service
-            android:name="com.chetan.periodiclocation.GoogleLocationService"
+            android:name="com.chetan.locationupdates.GoogleLocationService"
             android:enabled="true"
             android:exported="false"
             android:stopWithTask="true" />

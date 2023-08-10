@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.chetan.periodiclocation.GoogleLocationService;
-import com.chetan.periodiclocation.LocationUpdater;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -4,7 +4,7 @@
  * Last modified 20/01/23, 11:42 AM
  */
 
-package com.chetan.periodiclocation;
+package com.chetan.locationupdates;
 
 
 public class Constants {

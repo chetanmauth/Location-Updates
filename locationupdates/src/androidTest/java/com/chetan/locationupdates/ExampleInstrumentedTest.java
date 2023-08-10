@@ -1,4 +1,4 @@
-package com.chetan.periodiclocation;
+package com.chetan.locationupdates;
 
 import android.content.Context;
 
