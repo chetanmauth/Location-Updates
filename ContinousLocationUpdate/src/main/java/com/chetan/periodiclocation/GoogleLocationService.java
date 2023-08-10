@@ -83,7 +83,7 @@ public class GoogleLocationService extends Service {
         if (intent != null) {
             String action = intent.getAction();
             if (action != null) {
-                System.out.println("serviceAction:" + action);
+                //System.out.println("serviceAction:" + action);
                 if (action.equals(Constants.ACTION_START_LOCATION_SERVICE)) {
                     StartLocationService();
                 } else if (action.equals(Constants.ACTION_STOP_LOCATION_SERVICE)) {
