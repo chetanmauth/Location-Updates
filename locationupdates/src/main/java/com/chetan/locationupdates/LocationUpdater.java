@@ -3,6 +3,7 @@ package com.chetan.locationupdates;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.google.android.gms.location.LocationServices;
 
@@ -14,21 +15,25 @@ public class LocationUpdater {
         this.context = context;
     }
 
+    public static void simpleToast(Context context, String msg) {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
     public void StartLocationService() {
-            if (!isLocationServiceRunning()) {
-                Intent intent = new Intent(context, GoogleLocationService.class);
-                intent.setAction(Constants.ACTION_START_LOCATION_SERVICE);
-                context.startService(intent);
-                System.out.println("Location service started...");
-            }
+        if (!isLocationServiceRunning()) {
+            Intent intent = new Intent(context, GoogleLocationService.class);
+            intent.setAction(Constants.ACTION_START_LOCATION_SERVICE);
+            context.startService(intent);
+            System.out.println("Location service started...");
+        }
 
     }
 
     private void StopLocationService() {
-            Intent intent = new Intent(context, GoogleLocationService.class);
-            intent.setAction(Constants.ACTION_STOP_LOCATION_SERVICE);
-            context.startService(intent);
-            System.out.println("Location service stopped...");
+        Intent intent = new Intent(context, GoogleLocationService.class);
+        intent.setAction(Constants.ACTION_STOP_LOCATION_SERVICE);
+        context.startService(intent);
+        System.out.println("Location service stopped...");
     }
 
     private boolean isLocationServiceRunning() {
