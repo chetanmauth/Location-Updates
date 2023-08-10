@@ -4,21 +4,3 @@ plugins {
 
 
 }
-project.plugins.apply('maven-publish')
-
-allprojects {
-    plugins.withType(JavaPlugin).whenPluginAdded {
-
-        //Allows deploying to local repo
-        project.plugins.apply('maven-publish')
-        publishing {
-            publications {
-                mavenJava(MavenPublication) {
-                    groupId = 'com.chetan.locationupdates'
-                    artifactId = 'com.chetan.periodiclocation'
-                    version = '1.0'
-                }
-            }
-        }
-    }
-}

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
 }
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.chetan.locationupdate'
@@ -35,4 +36,14 @@ android {
 dependencies {
 
     implementation 'com.google.android.gms:play-services-location:21.0.1'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.chetan.locationupdates'
+            artifactId = 'com.chetan.periodiclocation'
+            version = '1.0'
+        }
+    }
 }
