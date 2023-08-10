@@ -12,25 +12,16 @@ allprojects {
 
         //Allows deploying to local repo
         project.plugins.apply('maven-publish')
-
-//        publishing {
-//            publications {
-//                mavenJava(MavenPublication) {
-//
-//                    groupId 'group'
-//                    artifactId project.name
-//                    version '1.3'
-//
-//                    /*
-//                     Disabling "from components.java" means that the
-//                     publishMavenJavaPublicationToMavenLocal
-//                     task is available on all modules but the jar
-//                     is not published :(
-//                   */
-//
-//                    from components.java
-//                }
-//            }
-//        }
+        publishing {
+            publications {
+                // Creates a Maven publication called "release".
+                release(MavenPublication) {
+                    from components.release
+                    groupId = 'com.github.chetanmauth'
+                    artifactId = 'Location-Updates'
+                    version = '1.4'
+                }
+            }
+        }
     }
 }
